@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="playlist" class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+        </tr>
+		<tr><th><a href="{{ Up }}">Up</a></th></tr>
+      </thead>
+      <tbody>
+	  {% for item in Data %}
+        <tr>
+          <td><a href="{{ item.href }}">{{ item.name }}</a></td>
+        </tr>
+      {% endfor %}
+	</tbody>
+</table>
+</div>
+{% endblock %}

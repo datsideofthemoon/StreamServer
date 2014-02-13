@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="SQLite - database.sqlite3" uuid="f81603b0-2896-4de7-8345-19bde4b20d2c">
+    <database-info product="SQLite" version="3.6.3" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="ALBUMS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="album" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="artistid" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="years" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="ARTISTS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="artist" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="GENRES" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="genre" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="MEDIAFILES" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="filename" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="fullpath" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="directory" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="size" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="format" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="bitrate" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="tn" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="track" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="genreid" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="artistid" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="albumid" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="year" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="comment" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="SQLITE_SEQUENCE" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="seq" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="USERS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="username" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="passwordhash" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="isadmin" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="settings" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="YEARS" schema="" catalog="" type="TABLE">
+      <column name="year" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="year"/>
+    </table>
+  </data-source>
+</component>

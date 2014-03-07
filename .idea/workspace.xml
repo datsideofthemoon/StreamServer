@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="071d63f9-cd2d-4096-8559-a343b90b8c28" name="Default" comment="" />
+    <list default="true" id="071d63f9-cd2d-4096-8559-a343b90b8c28" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jqm/NewStreamClient/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/streamserver/templates/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database.sqlite3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\digiman\StreamServer\database.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\digiman\StreamServer\streamserver\asjbdkjasdjnlkasd;lk.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\digiman\StreamServer\streamserver\log.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\digiman\StreamServer\streamserver\static\css\normalize.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\digiman\StreamServer\streamserver\static\fonts\hattori.otf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\digiman\StreamServer\streamserver\static\js\vendor\howler.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\digiman\StreamServer\streamserver\static\js\vendor\modernizr.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/StreamServer.iml" afterPath="$PROJECT_DIR$/.idea/StreamServer.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/__init__.py" afterPath="$PROJECT_DIR$/streamserver/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/templates/about.html" afterPath="$PROJECT_DIR$/streamserver/templates/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/templates/base.html" afterPath="$PROJECT_DIR$/streamserver/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/static/js/vendor/bootstrap-slider.js" afterPath="$PROJECT_DIR$/streamserver/static/js/vendor/bootstrap-slider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/static/css/bootstrap.css" afterPath="$PROJECT_DIR$/streamserver/static/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/static/js/vendor/bootstrap.js" afterPath="$PROJECT_DIR$/streamserver/static/js/vendor/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/config.py" afterPath="$PROJECT_DIR$/streamserver/config.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/templates/folders.html" afterPath="$PROJECT_DIR$/streamserver/templates/folders.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/templates/index.html" afterPath="$PROJECT_DIR$/streamserver/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/static/js/vendor/jquery.js" afterPath="$PROJECT_DIR$/streamserver/static/js/vendor/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/static/js/vendor/jquery.lazyload.js" afterPath="$PROJECT_DIR$/streamserver/static/js/vendor/jquery.lazyload.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/templates/library.html" afterPath="$PROJECT_DIR$/streamserver/templates/library.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/static/css/main.css" afterPath="$PROJECT_DIR$/streamserver/static/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/mediascanner.py" afterPath="$PROJECT_DIR$/streamserver/mediascanner.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/static/js/plugins.js" afterPath="$PROJECT_DIR$/streamserver/static/js/plugins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/templates/random.html" afterPath="$PROJECT_DIR$/streamserver/templates/random.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runserver.py" afterPath="$PROJECT_DIR$/runserver.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/schema.sql" afterPath="$PROJECT_DIR$/streamserver/schema.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/serverdatabase.py" afterPath="$PROJECT_DIR$/streamserver/serverdatabase.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/static/css/slider.css" afterPath="$PROJECT_DIR$/streamserver/static/css/slider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/static/js/streamplayer.js" afterPath="$PROJECT_DIR$/streamserver/static/js/streamplayer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/tagreader.py" afterPath="$PROJECT_DIR$/streamserver/tagreader.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamserver/views.py" afterPath="$PROJECT_DIR$/streamserver/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="StreamServer.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,7 +52,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/StreamServer$StreamServer.coverage" NAME="StreamServer Coverage Results" MODIFIED="1392316149913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/StreamServer$StreamServer.coverage" NAME="StreamServer Coverage Results" MODIFIED="1393850549273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -25,93 +65,161 @@
     <favorites_list name="StreamServer" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="runserver.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/runserver.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="31" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serverdatabase.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/streamserver/serverdatabase.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="18" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="2006">
-              <folding>
-                <marker date="1392267440325" expanded="true" signature="539:570" placeholder="INSERT INTO ..." />
-                <marker date="1392267440325" expanded="true" signature="853:884" placeholder="INSERT INTO ..." />
-                <marker date="1392267440325" expanded="true" signature="1121:1177" placeholder="select * FRO..mediafiles..." />
-                <marker date="1392267440325" expanded="true" signature="1266:1297" placeholder="select Count..mediafiles..." />
-                <marker date="1392267440325" expanded="true" signature="1368:1408" placeholder="select 1 FRO..mediafiles..." />
-                <marker date="1392267440325" expanded="true" signature="1504:1528" placeholder="select * fro..mediafiles..." />
-                <marker date="1392267440325" expanded="true" signature="2455:2474" placeholder="pragma forei..." />
-                <marker date="1392267440325" expanded="true" signature="2620:2642" placeholder="pragma forei..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DATABASE/f81603b0-2896-4de7-8345-19bde4b20d2c" pinned="false" current="false" current-in-tab="false">
-        <entry file="uml://DATABASE/f81603b0-2896-4de7-8345-19bde4b20d2c">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>DATABASE</ID>
-              <OriginalElement>f81603b0-2896-4de7-8345-19bde4b20d2c</OriginalElement>
-              <nodes>
-                <node x="0.0" y="354.0">f81603b0-2896-4de7-8345-19bde4b20d2c.table:ALBUMS</node>
-                <node x="193.0" y="354.0">f81603b0-2896-4de7-8345-19bde4b20d2c.table:ARTISTS</node>
-                <node x="0.0" y="0.0">f81603b0-2896-4de7-8345-19bde4b20d2c.table:MEDIAFILES</node>
-                <node x="0.0" y="508.0">f81603b0-2896-4de7-8345-19bde4b20d2c.table:SQLITE_SEQUENCE</node>
-                <node x="346.0" y="354.0">f81603b0-2896-4de7-8345-19bde4b20d2c.table:GENRES</node>
-                <node x="175.0" y="508.0">f81603b0-2896-4de7-8345-19bde4b20d2c.table:YEARS</node>
-                <node x="393.0" y="0.0">f81603b0-2896-4de7-8345-19bde4b20d2c.table:USERS</node>
-              </nodes>
-              <notes />
-              <edges />
-              <settings layout="Hierarchic Group" zoom="1.0" x="-67.5" y="228.0" />
-              <SelectedNodes>
-                <node>f81603b0-2896-4de7-8345-19bde4b20d2c.table:ALBUMS</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Key columns</Category>
-                <Category>Columns</Category>
-              </Categories>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SQLITE_SEQUENCE" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/f4c80c85/f81603b0-2896-4de7-8345-19bde4b20d2c/..SQLITE_SEQUENCE">
-          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MEDIAFILES" pinned="false" current="true" current-in-tab="true">
-        <entry file="dbDummy://dbtable:/f4c80c85/f81603b0-2896-4de7-8345-19bde4b20d2c/..MEDIAFILES">
-          <provider editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="22" selection-start="448" selection-end="455" vertical-scroll-proportion="0.5254545" vertical-offset="0" max-vertical-offset="550">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.75487465">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/streamserver/__init__.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="14" column="0" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="969">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/streamserver/views.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="4" column="0" selection-start="178" selection-end="178" vertical-scroll-proportion="0.077892326" vertical-offset="0" max-vertical-offset="3162">
+                  <folding>
+                    <element signature="e#6#121#0" expanded="true" />
+                    <marker date="1393300836920" expanded="true" signature="1485:1544" placeholder="select 1 fro..users..." />
+                    <marker date="1393300836920" expanded="true" signature="3122:3178" placeholder="select id, d..directories..." />
+                    <marker date="1393300836920" expanded="true" signature="3221:3264" placeholder="select * fro..mediafiles..." />
+                    <marker date="1393300836920" expanded="true" signature="3461:3499" placeholder="select id, a..artists..." />
+                    <marker date="1393300836920" expanded="true" signature="3548:3600" placeholder="select id, a..albums..." />
+                    <marker date="1393300836920" expanded="true" signature="3762:3798" placeholder="select id, a..albums..." />
+                    <marker date="1393300836920" expanded="true" signature="3847:3886" placeholder="select * fro..mediafiles..." />
+                    <marker date="1393300836920" expanded="true" signature="4048:4084" placeholder="select id, g..genres..." />
+                    <marker date="1393300836920" expanded="true" signature="4133:4172" placeholder="select * fro..mediafiles..." />
+                    <marker date="1393300836920" expanded="true" signature="4332:4388" placeholder="select disti..." />
+                    <marker date="1393300836920" expanded="true" signature="4437:4473" placeholder="select * fro..mediafiles..." />
+                    <marker date="1393300836920" expanded="true" signature="4601:4635" placeholder="select 1 fro..mediafiles..." />
+                    <marker date="1393300836920" expanded="true" signature="4850:4880" placeholder="select * fro..mediafiles..." />
+                    <marker date="1393300836920" expanded="true" signature="4850:4892" placeholder="select * fro..mediafiles..." />
+                    <marker date="1393300836920" expanded="true" signature="4850:4893" placeholder="select * fro..mediafiles..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="serverdatabase.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/streamserver/serverdatabase.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="17" column="0" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="3196">
+                  <folding>
+                    <marker date="1393299795456" expanded="true" signature="462:521" placeholder="insert into ..." />
+                    <marker date="1393299795456" expanded="true" signature="830:880" placeholder="insert into ..." />
+                    <marker date="1393299795456" expanded="true" signature="1140:1177" placeholder="SELECT id FR..albums..." />
+                    <marker date="1393299795456" expanded="true" signature="1396:1435" placeholder="insert into ..." />
+                    <marker date="1393299795456" expanded="true" signature="1687:1726" placeholder="SELECT id FR..artists..." />
+                    <marker date="1393299795456" expanded="true" signature="1944:1981" placeholder="insert into ..." />
+                    <marker date="1393299795456" expanded="true" signature="2233:2270" placeholder="SELECT id FR..genres..." />
+                    <marker date="1393299795456" expanded="true" signature="2601:2632" placeholder="INSERT INTO ..." />
+                    <marker date="1393299795456" expanded="true" signature="3036:3067" placeholder="INSERT INTO ..." />
+                    <marker date="1393299795456" expanded="true" signature="3402:3458" placeholder="select * FRO..mediafiles..." />
+                    <marker date="1393299795456" expanded="true" signature="3613:3644" placeholder="select Count..mediafiles..." />
+                    <marker date="1393299795456" expanded="true" signature="3772:3812" placeholder="select * FRO..mediafiles..." />
+                    <marker date="1393299795456" expanded="true" signature="3927:3951" placeholder="select * fro..mediafiles..." />
+                    <marker date="1393299795456" expanded="true" signature="5082:5101" placeholder="PRAGMA forei..." />
+                    <marker date="1393299795456" expanded="true" signature="5286:5308" placeholder="PRAGMA forei..." />
+                    <marker date="1393299795456" expanded="true" signature="5346:5365" placeholder="PRAGMA forei..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="streamplayer.js" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/streamserver/static/js/streamplayer.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="483" column="5" selection-start="19980" selection-end="19980" vertical-scroll-proportion="1.2947658" vertical-offset="3803" max-vertical-offset="5644">
+                  <folding>
+                    <element signature="e#2348#11921#0" expanded="false" />
+                    <element signature="e#11953#12723#0" expanded="false" />
+                    <element signature="e#13413#14218#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/streamserver/static/css/main.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="27" column="0" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="663">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="bootstrap.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/streamserver/static/css/bootstrap.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="2033" column="0" selection-start="37464" selection-end="37464" vertical-scroll-proportion="0.0" vertical-offset="34561" max-vertical-offset="98447">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="library.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/streamserver/templates/library.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="9" column="33" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="544">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/streamserver/templates/base.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="24" column="42" selection-start="1778" selection-end="1778" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1394">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="plugins.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/streamserver/static/js/plugins.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="normalize.min.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/streamserver/static/css/normalize.min.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="bootstrap.slatetheme.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/streamserver/static/css/bootstrap.slatetheme.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="5466" column="6" selection-start="115482" selection-end="115486" vertical-scroll-proportion="0.0" vertical-offset="92635" max-vertical-offset="104074">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -119,14 +227,29 @@
         <option value="$PROJECT_DIR$/StreamServer.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/runserver.py" />
+        <option value="$PROJECT_DIR$/streamserver/temp.txt" />
+        <option value="C:/Python33/Lib/site-packages/mutagenx/__init__.py" />
+        <option value="C:/Python33/Lib/site-packages/mutagenx/mp3.py" />
+        <option value="$PROJECT_DIR$/streamserver/config.py" />
+        <option value="$PROJECT_DIR$/streamserver/__init__.py" />
+        <option value="$PROJECT_DIR$/streamserver/templates/login.html" />
+        <option value="$PROJECT_DIR$/streamserver/static/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/streamserver/static/css/bootstrap.slatetheme.css" />
+        <option value="$PROJECT_DIR$/jqm/NewStreamClient/index.html" />
+        <option value="$PROJECT_DIR$/streamserver/tagreader.py" />
+        <option value="$PROJECT_DIR$/streamserver/mediascanner.py" />
+        <option value="$PROJECT_DIR$/streamserver/schema.sql" />
+        <option value="$PROJECT_DIR$/streamserver/serverdatabase.py" />
+        <option value="$PROJECT_DIR$/streamserver/views.py" />
+        <option value="$PROJECT_DIR$/streamserver/static/css/main.css" />
+        <option value="$PROJECT_DIR$/streamserver/templates/base.html" />
+        <option value="$PROJECT_DIR$/streamserver/static/js/streamplayer.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="960" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -176,6 +299,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -194,22 +318,97 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StreamServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StreamServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="streamserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StreamServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StreamServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="streamserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StreamServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StreamServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="streamserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="C:/Program Files (x86)/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="preferences.sourceCode.JavaScript" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="LayoutCode.rearrangeEntriesPython" value="false" />
+    <property name="SearchEverywhereHistory" value="A&#10;&gt;&#10;9&#10;Crea&#10;:" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="276" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="293" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="300" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="979" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="297" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="286" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="293" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="972" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="LayoutCode.rearrangeEntriesCSS" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -219,7 +418,18 @@
       </console-settings>
     </option>
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\digiman\StreamServer\streamserver" />
+      <recent name="C:\Users\digiman\StreamServer" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.StreamServer">
+    <configuration default="false" name="login.html" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" temporary="true" uri="http://localhost:63342/StreamServer/login.html">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -421,13 +631,21 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runserver.py" />
       <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Python.StreamServer" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.login.html" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.login.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
@@ -473,27 +691,47 @@
       </Trello>
     </servers>
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="0" width="960" height="1040" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22523962" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17092651" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3174946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17818575" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286638" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.080404684" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11231101" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1962306" sideWeight="0.49919486" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18142548" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17092651" sideWeight="0.50080514" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35529158" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40625" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721382" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39956802" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
@@ -511,12 +749,113 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="45" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/runserver.py">
+    <entry file="file://C:/Python33/Lib/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="31" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+        <state line="1460" column="0" selection-start="61615" selection-end="61615" vertical-scroll-proportion="0.0" vertical-offset="24820" max-vertical-offset="31416" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="9" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="357" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/mediascanner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="57" selection-start="2199" selection-end="2199" vertical-scroll-proportion="0.0" vertical-offset="1258" max-vertical-offset="1785" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/tagreader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="182" column="0" selection-start="5633" selection-end="5633" vertical-scroll-proportion="0.0" vertical-offset="2398" max-vertical-offset="3298">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/serverdatabase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="94" selection-start="4060" selection-end="4063" vertical-scroll-proportion="0.0" vertical-offset="2006" max-vertical-offset="3213">
+          <folding>
+            <marker date="1393299795456" expanded="true" signature="462:521" placeholder="insert into ..." />
+            <marker date="1393299795456" expanded="true" signature="830:880" placeholder="insert into ..." />
+            <marker date="1393299795456" expanded="true" signature="1140:1177" placeholder="SELECT id FR..albums..." />
+            <marker date="1393299795456" expanded="true" signature="1396:1435" placeholder="insert into ..." />
+            <marker date="1393299795456" expanded="true" signature="1687:1726" placeholder="SELECT id FR..artists..." />
+            <marker date="1393299795456" expanded="true" signature="1944:1981" placeholder="insert into ..." />
+            <marker date="1393299795456" expanded="true" signature="2233:2270" placeholder="SELECT id FR..genres..." />
+            <marker date="1393299795456" expanded="true" signature="2601:2632" placeholder="INSERT INTO ..." />
+            <marker date="1393299795456" expanded="true" signature="3036:3067" placeholder="INSERT INTO ..." />
+            <marker date="1393299795456" expanded="true" signature="3402:3458" placeholder="select * FRO..mediafiles..." />
+            <marker date="1393299795456" expanded="true" signature="3613:3644" placeholder="select Count..mediafiles..." />
+            <marker date="1393299795456" expanded="true" signature="3772:3812" placeholder="select * FRO..mediafiles..." />
+            <marker date="1393299795456" expanded="true" signature="3927:3951" placeholder="select * fro..mediafiles..." />
+            <marker date="1393299795456" expanded="true" signature="5082:5101" placeholder="PRAGMA forei..." />
+            <marker date="1393299795456" expanded="true" signature="5286:5308" placeholder="PRAGMA forei..." />
+            <marker date="1393299795456" expanded="true" signature="5346:5365" placeholder="PRAGMA forei..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="185" selection-end="215" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="187" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="46" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.0" vertical-offset="624" max-vertical-offset="1292" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="22" selection-start="657" selection-end="657" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="58" selection-start="956" selection-end="956" vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="2125">
+          <folding>
+            <element signature="e#6#121#0" expanded="true" />
+            <marker date="1393300836920" expanded="true" signature="1485:1544" placeholder="select 1 fro..users..." />
+            <marker date="1393300836920" expanded="true" signature="3122:3178" placeholder="select id, d..directories..." />
+            <marker date="1393300836920" expanded="true" signature="3221:3264" placeholder="select * fro..mediafiles..." />
+            <marker date="1393300836920" expanded="true" signature="3461:3499" placeholder="select id, a..artists..." />
+            <marker date="1393300836920" expanded="true" signature="3548:3600" placeholder="select id, a..albums..." />
+            <marker date="1393300836920" expanded="true" signature="3762:3798" placeholder="select id, a..albums..." />
+            <marker date="1393300836920" expanded="true" signature="3847:3886" placeholder="select * fro..mediafiles..." />
+            <marker date="1393300836920" expanded="true" signature="4048:4084" placeholder="select id, g..genres..." />
+            <marker date="1393300836920" expanded="true" signature="4133:4172" placeholder="select * fro..mediafiles..." />
+            <marker date="1393300836920" expanded="true" signature="4332:4388" placeholder="select disti..." />
+            <marker date="1393300836920" expanded="true" signature="4437:4473" placeholder="select * fro..mediafiles..." />
+            <marker date="1393300836920" expanded="true" signature="4601:4635" placeholder="select 1 fro..mediafiles..." />
+            <marker date="1393300836920" expanded="true" signature="4850:4880" placeholder="select * fro..mediafiles..." />
+            <marker date="1393300836920" expanded="true" signature="4850:4892" placeholder="select * fro..mediafiles..." />
+            <marker date="1393300836920" expanded="true" signature="4850:4893" placeholder="select * fro..mediafiles..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/tagreader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="0" selection-start="3613" selection-end="3613" vertical-scroll-proportion="0.0" vertical-offset="1680" max-vertical-offset="2975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/mediascanner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="0" selection-start="2124" selection-end="2124" vertical-scroll-proportion="0.0" vertical-offset="677" max-vertical-offset="1615" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0" vertical-offset="99" max-vertical-offset="1980">
           <folding />
         </state>
       </provider>
@@ -532,26 +871,19 @@
           <settings layout="Hierarchic Group" zoom="1.0" x="588.0" y="300.0" />
           <SelectedNodes />
           <Categories>
-            <Category>Key columns</Category>
             <Category>Columns</Category>
+            <Category>Key columns</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/streamserver/serverdatabase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="18" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="2006">
-          <folding>
-            <marker date="1392267440325" expanded="true" signature="539:570" placeholder="INSERT INTO ..." />
-            <marker date="1392267440325" expanded="true" signature="853:884" placeholder="INSERT INTO ..." />
-            <marker date="1392267440325" expanded="true" signature="1121:1177" placeholder="select * FRO..mediafiles..." />
-            <marker date="1392267440325" expanded="true" signature="1266:1297" placeholder="select Count..mediafiles..." />
-            <marker date="1392267440325" expanded="true" signature="1368:1408" placeholder="select 1 FRO..mediafiles..." />
-            <marker date="1392267440325" expanded="true" signature="1504:1528" placeholder="select * fro..mediafiles..." />
-            <marker date="1392267440325" expanded="true" signature="2455:2474" placeholder="pragma forei..." />
-            <marker date="1392267440325" expanded="true" signature="2620:2642" placeholder="pragma forei..." />
-          </folding>
-        </state>
+    <entry file="dbDummy://dbtable:/f4c80c85/f81603b0-2896-4de7-8345-19bde4b20d2c/..SQLITE_SEQUENCE">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100" />
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="uml://DATABASE/f81603b0-2896-4de7-8345-19bde4b20d2c">
@@ -570,34 +902,277 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="-67.5" y="228.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="152.0" y="386.0" />
           <SelectedNodes>
             <node>f81603b0-2896-4de7-8345-19bde4b20d2c.table:ALBUMS</node>
           </SelectedNodes>
           <Categories>
-            <Category>Key columns</Category>
             <Category>Columns</Category>
+            <Category>Key columns</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/f4c80c85/f81603b0-2896-4de7-8345-19bde4b20d2c/..SQLITE_SEQUENCE">
+    <entry file="file://$PROJECT_DIR$/streamserver/static/css/slider.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2431" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/static/js/vendor/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="33201" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="41" selection-start="77" selection-end="77" vertical-scroll-proportion="0.018888889" vertical-offset="0" max-vertical-offset="900" />
+      </provider>
+    </entry>
+    <entry file="file://C:/Python33/Lib/site-packages/mutagenx/easyid3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="24" selection-start="3289" selection-end="3289" vertical-scroll-proportion="-10.9" vertical-offset="7562" max-vertical-offset="8857" />
+      </provider>
+    </entry>
+    <entry file="file://C:/Python33/Lib/site-packages/flask/globals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="833" />
+      </provider>
+    </entry>
+    <entry file="file://C:/Python33/Lib/site-packages/werkzeug/local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="161" column="0" selection-start="4700" selection-end="4700" vertical-scroll-proportion="0.0" vertical-offset="2527" max-vertical-offset="7021" />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f4c80c85/f81603b0-2896-4de7-8345-19bde4b20d2c/..YEARS">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100" />
+      </provider>
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
       </provider>
+    </entry>
+    <entry file="dbDummy://db-console:/f4c80c85/f81603b0-2896-4de7-8345-19bde4b20d2c/">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595" />
+      </provider>
+    </entry>
+    <entry file="file://C:/Python33/Lib/site-packages/mutagenx/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4590" />
+      </provider>
+    </entry>
+    <entry file="file://C:/Python33/Lib/site-packages/mutagenx/mp3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="170" column="24" selection-start="5987" selection-end="5987" vertical-scroll-proportion="0.0" vertical-offset="2566" max-vertical-offset="4692" />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f4c80c85/f81603b0-2896-4de7-8345-19bde4b20d2c/..ARTISTS">
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100" />
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f4c80c85/f81603b0-2896-4de7-8345-19bde4b20d2c/..GENRES">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="153" />
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f4c80c85/f81603b0-2896-4de7-8345-19bde4b20d2c/..MEDIAFILES">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425" />
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f4c80c85/f81603b0-2896-4de7-8345-19bde4b20d2c/..ALBUMS">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100" />
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-1571908645/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5195" column="8" selection-start="178796" selection-end="178796" vertical-scroll-proportion="0.33270678" vertical-offset="88138" max-vertical-offset="95778" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/temp.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="17" selection-start="48" selection-end="48" vertical-scroll-proportion="0.053375196" vertical-offset="0" max-vertical-offset="637" />
+      </provider>
+    </entry>
+    <entry file="file://C:/Python33/Lib/site-packages/flask/ctx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="0" selection-start="4755" selection-end="4755" vertical-scroll-proportion="0.29513344" vertical-offset="2294" max-vertical-offset="6647" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="72" selection-start="872" selection-end="872" vertical-scroll-proportion="0.52012885" vertical-offset="0" max-vertical-offset="621" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="185" selection-end="215" vertical-scroll-proportion="0.12481645" vertical-offset="0" max-vertical-offset="681" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/f4c80c85/f81603b0-2896-4de7-8345-19bde4b20d2c/..MEDIAFILES">
-      <provider editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+    <entry file="file://$PROJECT_DIR$/jqm/NewStreamClient/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="113" selection-start="565" selection-end="565" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="646" />
+      </provider>
+    </entry>
+    <entry file="file://C:/Python33/Lib/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1460" column="0" selection-start="61615" selection-end="61615" vertical-scroll-proportion="-0.6240822" vertical-offset="24820" max-vertical-offset="30991" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/static/js/streamplayer.js.bak">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-4.5874124" vertical-offset="2624" max-vertical-offset="3196" />
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/tagreader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="22" selection-start="448" selection-end="455" vertical-scroll-proportion="0.5254545" vertical-offset="0" max-vertical-offset="550">
+        <state line="168" column="24" selection-start="5176" selection-end="5176" vertical-scroll-proportion="0.35285053" vertical-offset="2627" max-vertical-offset="3298">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/mediascanner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="0" selection-start="2563" selection-end="2563" vertical-scroll-proportion="-0.047765795" vertical-offset="1578" max-vertical-offset="2227" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="45" selection-start="1360" selection-end="1360" vertical-scroll-proportion="0.63432837" vertical-offset="459" max-vertical-offset="1309">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/serverdatabase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3128">
+          <folding>
+            <marker date="1393299795456" expanded="true" signature="462:521" placeholder="insert into ..." />
+            <marker date="1393299795456" expanded="true" signature="830:880" placeholder="insert into ..." />
+            <marker date="1393299795456" expanded="true" signature="1140:1177" placeholder="SELECT id FR..albums..." />
+            <marker date="1393299795456" expanded="true" signature="1396:1435" placeholder="insert into ..." />
+            <marker date="1393299795456" expanded="true" signature="1687:1726" placeholder="SELECT id FR..artists..." />
+            <marker date="1393299795456" expanded="true" signature="1944:1981" placeholder="insert into ..." />
+            <marker date="1393299795456" expanded="true" signature="2233:2270" placeholder="SELECT id FR..genres..." />
+            <marker date="1393299795456" expanded="true" signature="2601:2632" placeholder="INSERT INTO ..." />
+            <marker date="1393299795456" expanded="true" signature="3036:3067" placeholder="INSERT INTO ..." />
+            <marker date="1393299795456" expanded="true" signature="3402:3458" placeholder="select * FRO..mediafiles..." />
+            <marker date="1393299795456" expanded="true" signature="3613:3644" placeholder="select Count..mediafiles..." />
+            <marker date="1393299795456" expanded="true" signature="3772:3812" placeholder="select * FRO..mediafiles..." />
+            <marker date="1393299795456" expanded="true" signature="3927:3951" placeholder="select * fro..mediafiles..." />
+            <marker date="1393299795456" expanded="true" signature="5082:5101" placeholder="PRAGMA forei..." />
+            <marker date="1393299795456" expanded="true" signature="5286:5308" placeholder="PRAGMA forei..." />
+            <marker date="1393299795456" expanded="true" signature="5346:5365" placeholder="PRAGMA forei..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/templates/library.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="33" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/static/css/bootstrap.slatetheme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5466" column="6" selection-start="115482" selection-end="115486" vertical-scroll-proportion="0.0" vertical-offset="92635" max-vertical-offset="104074">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/static/css/normalize.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/static/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2033" column="0" selection-start="37464" selection-end="37464" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="98447">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/static/js/plugins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="42" selection-start="1778" selection-end="1778" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1394">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/static/js/streamplayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="483" column="5" selection-start="19980" selection-end="19980" vertical-scroll-proportion="1.2947658" vertical-offset="3803" max-vertical-offset="5644">
+          <folding>
+            <element signature="e#2348#11921#0" expanded="false" />
+            <element signature="e#11953#12723#0" expanded="false" />
+            <element signature="e#13413#14218#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamserver/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="178" selection-end="178" vertical-scroll-proportion="0.077892326" vertical-offset="0" max-vertical-offset="3162">
+          <folding>
+            <element signature="e#6#121#0" expanded="true" />
+            <marker date="1393300836920" expanded="true" signature="1485:1544" placeholder="select 1 fro..users..." />
+            <marker date="1393300836920" expanded="true" signature="3122:3178" placeholder="select id, d..directories..." />
+            <marker date="1393300836920" expanded="true" signature="3221:3264" placeholder="select * fro..mediafiles..." />
+            <marker date="1393300836920" expanded="true" signature="3461:3499" placeholder="select id, a..artists..." />
+            <marker date="1393300836920" expanded="true" signature="3548:3600" placeholder="select id, a..albums..." />
+            <marker date="1393300836920" expanded="true" signature="3762:3798" placeholder="select id, a..albums..." />
+            <marker date="1393300836920" expanded="true" signature="3847:3886" placeholder="select * fro..mediafiles..." />
+            <marker date="1393300836920" expanded="true" signature="4048:4084" placeholder="select id, g..genres..." />
+            <marker date="1393300836920" expanded="true" signature="4133:4172" placeholder="select * fro..mediafiles..." />
+            <marker date="1393300836920" expanded="true" signature="4332:4388" placeholder="select disti..." />
+            <marker date="1393300836920" expanded="true" signature="4437:4473" placeholder="select * fro..mediafiles..." />
+            <marker date="1393300836920" expanded="true" signature="4601:4635" placeholder="select 1 fro..mediafiles..." />
+            <marker date="1393300836920" expanded="true" signature="4850:4880" placeholder="select * fro..mediafiles..." />
+            <marker date="1393300836920" expanded="true" signature="4850:4892" placeholder="select * fro..mediafiles..." />
+            <marker date="1393300836920" expanded="true" signature="4850:4893" placeholder="select * fro..mediafiles..." />
+          </folding>
         </state>
       </provider>
     </entry>

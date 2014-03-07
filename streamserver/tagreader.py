@@ -9,196 +9,180 @@
 ## properties like Album, Artist, Track and so on.									  ##
 ##########################################################################################
 #LIBS
-import sys,logging, mutagenx,json
+import sys, os, logging, mutagenx, json, datetime
 #MODULES
 from streamserver import app
 
 #Set up log:
-logging.basicConfig(format = u'%(filename)-20s:%(lineno)-5s %(levelname)-8s [%(asctime)s]  %(message)s',level=app.Config.LOG_LEVEL)#, filename ='streamserver.log'
+logging.basicConfig(format='%(filename)-20s:%(lineno)-5s %(levelname)-8s [%(asctime)s]  %(message)s',
+                    level=app.Config.LOG_LEVEL)  #, filename ='streamserver.log'
 Log = logging.getLogger(__name__)
 
+
 class FileNotSupported(Exception):
-	pass
+    pass
 
-#import mutagen.apev2
-
-
-class APEv2File():
-	# Map APE names to QL names. APE tags are also usually capitalized.
-	# Also blacklist a number of tags.
-	IGNORE = ["file", "index", "introplay", "dummy"]
-	TRANS = {"subtitle": "version",
-			"track": "tracknumber",
-			"disc": "discnumber",
-			"catalog": "labelid",
-			"year": "date",
-			"record location": "location",
-			"album artist": "albumartist",
-			"debut album": "originalalbum",
-			"record date": "recordingdate",
-			"original artist": "originalartist",
-			"mixartist": "remixer",
-	}
-	#SNART = dict([(v, k) for k, v in iter(TRANS)])
-
-	def __init__(self, filename):
-		try:
-			tag = mutagen.apev2.APEv2(filename)
-		except mutagen.apev2.APENoHeaderError:
-			tag = {}
-		for key, value in tag.items():
-			key = self.TRANS.get(key.lower(), key.lower())
-			if (value.kind == mutagen.apev2.TEXT and key not in self.IGNORE):
-				self[key] = "\n".join(list(value))
-		#self.sanitize(filename)
-
-class ID3File():
-	IDS = {"TIT1": "grouping",
-			"TIT2": "title",
-			"TIT3": "version",
-			"TPE1": "artist",
-			"TPE2": "performer",
-			"TPE3": "conductor",
-			"TPE4": "arranger",
-			"TEXT": "lyricist",
-			"TCOM": "composer",
-			"TENC": "encodedby",
-			"TALB": "album",
-			"TRCK": "tracknumber",
-			"TPOS": "discnumber",
-			"TSRC": "isrc",
-			"TCOP": "copyright",
-			"TPUB": "organization",
-			"TSST": "discsubtitle",
-			"TOLY": "author",
-			"TMOO": "mood",
-			"TBPM": "bpm",
-			"TDRC": "date",
-			"TDOR": "originaldate",
-			"TOAL": "originalalbum",
-			"TOPE": "originalartist",
-			"WOAR": "website",
-			"TSOP": "artistsort",
-			"TSOA": "albumsort",
-			"TSOT": "titlesort",
-			"TSO2": "albumartistsort",
-			"TSOC": "composersort",
-			"TMED": "media",
-			"TCMP": "compilation",
-	}
-	#SDI = dict([(v, k) for k, v in IDS.iteritems()])
-
-
-	def CODECS(self):
-		codecs = ["utf-8"]
-		#codecs_conf = config.get("editing", "id3encoding")
-		#codecs.extend(codecs_conf.strip().split())
-		codecs.append("iso-8859-1")
-		return codecs
-
-	def __distrust_latin1(self, text, encoding):
-		assert isinstance(text, unicode)
-		if encoding == 0:
-			text = text.encode('iso-8859-1')
-			for codec in self.CODECS:
-				try:
-					text = text.decode(codec)
-				except (UnicodeError, LookupError):
-					pass
-				else:
-					break
-			else:
-				return None
-		return text
-		
-	def __validate_name(self, k):
-		"""Returns a ascii string or None if the key isn't supported"""
-		if isinstance(k, unicode):
-			k = k.encode("utf-8")
-		if not (k and "=" not in k and "~" not in k
-				and k.encode("ascii", "replace") == k):
-			return
-		return k
-		
-	def __init__(self, filename):
-		tag = mutagen.id3.ID3(filename)
-
-		for frame in tag.values():
-			if frame.FrameID == "APIC" and len(frame.data):
-				self.has_images = True
-				continue
-			elif frame.FrameID == "COMM" and frame.desc == "":
-				name = "comment"
-			elif frame.FrameID == "TMCL":
-				for role, name in frame.people:
-					key = self.__validate_name("performer:" + role)
-					if key:
-						self.add(key, name)
-				continue
-			else:
-				name = self.IDS.get(frame.FrameID, "").lower()
-
-			name = self.__validate_name(name)
-			if not name:
-				continue
-			name = name.lower()
-
-			id3id = frame.FrameID
-			if id3id.startswith("T"):
-				text = "\n".join(map(unicode, frame.text))
-			elif id3id == "COMM":
-				text = "\n".join(frame.text)
-			elif id3id.startswith("W"):
-				text = frame.url
-				frame.encoding = 0
-			else:
-				continue
-
-			if not text:
-				continue
-			text = self.__distrust_latin1(text, frame.encoding)
-			if text is None:
-				continue
-
-			if name in self:
-				self[name] += "\n" + text
-			else:
-				self[name] = text
-			self[name] = self[name].strip()
-
-			# to catch a missing continue above
-			del name
-		# foobar2000 writes long dates in a TXXX DATE tag, leaving the TDRC
-		# tag out. Read the TXXX DATE, but only if the TDRC tag doesn't exist
-		# to avoid reverting or duplicating tags in existing libraries.
-		if audio.tags and "date" not in self:
-			for frame in tag.getall('TXXX:DATE'):
-				self["date"] = "\n".join(map(unicode, frame.text))
 
 class Tags:
-	def __init__(self, filenam):
-		self.filename = filenam
-		self.mutagen_file=mutagenx.File(filenam)
-		#print(type(self.mutagen_file))
-		#return self#setattr(o, "foo", "bar")
+    tag_groups = {
+#id3
+        "TCON":"genre",
+        "TIT1":"grouping",
+        "TIT2":"title",
+        "TIT3":"version",
+        "TPE1":"artist",
+        "TPE2":"performer",
+        "TPE3":"conductor",
+        "TPE4":"arranger",
+        "TEXT":"lyricist",
+        "TCOM":"composer",
+        "TENC":"encodedby",
+        "TALB":"album",
+        "TRCK":"tracknumber",
+        "TPOS":"discnumber",
+        "TSRC":"isrc",
+        "TCOP":"copyright",
+        "TPUB":"organization",
+        "TSST":"discsubtitle",
+        "TOLY":"author",
+        "TMOO":"mood",
+        "TBPM":"bpm",
+        "TDRC":"date",
+        "TDOR":"originaldate",
+        "TOAL":"originalalbum",
+        "TOPE":"originalartist",
+        "WOAR":"website",
+        "TSOP":"artistsort",
+        "TSOA":"albumsort",
+        "TSOT":"titlesort",
+        "TSO2":"albumartistsort",
+        "TSOC":"composersort",
+        "TMED":"media",
+        "TCMP":"compilation",
 
-	def Album(self):
-			return self.album
-	def Artist(self):
-			return self.artist
-	def Vendor(self):
-			return self.vendor
-	def Title(self):
-			return self.title
-	def TrackTotal(self):
-			return self.tracktotal
-	def TrackNumber(self):
-			return self.tracknumber
-	def Genre(self):
-			return self.genre
-	def DiscNumber(self):
-			return self.discnum
-	def Date(self):
-			return self.date
-	def Comment(self):
-			return self.comment
+#flac
+        "date":"date",
+        "tracknumber":"tracknumber",
+        "genre":"genre",
+        "artist":"artist",
+        "comment":"comment",
+        "album":"album",
+        "discid":"discid",
+        "title":"title",
+
+#apev2
+        "subtitle":"version",
+        "track":"tracknumber",
+        "disc":"discnumber",
+        "catalog":"labelid",
+        "year":"date",
+        "record location":"location",
+        "album artist":"albumartist",
+        "debut album":"originalalbum",
+        "record date":"recordingdate",
+        "original artist":"originalartist",
+        "mixartist":"remixer",
+#ape
+        "Genre":"genre",
+        "Year": "date",
+        "Artist":"artist",
+        "Album": "album",
+        "Track": "tracknumber",
+        "Title":"title",
+#m4a
+        b'\xa9nam': "title",
+        b'\xa9ART': "artist",
+        b'aART': "albumartist", #???
+        b'\xa9alb': "album",
+        b'trkn': "tracknumber",
+        b'disk': "discnumber",
+        b'\xa9gen':"genre",
+        b'\xa9day': "date",
+        b'cprt': "copyright",
+        b'xid ' :"discid"
+}
+
+    def parse_mutagen_value(self,data):
+        if isinstance(data,str):
+            return data
+        elif isinstance(data,tuple):
+            var=list()
+            var.append(str(i) for i in data)
+            var=" ".join(var)
+            return var
+        elif isinstance(data,list):
+            if isinstance(data[0],tuple):
+                var=list()
+                for i in data[0]: var.append(str(i))
+                return " ".join(var)
+            else:
+                return " ".join(data)
+        elif isinstance(data,mutagenx.apev2.APETextValue):
+            return data.value
+        else:
+            if isinstance(data,mutagenx.id3.TDRC):
+                return data.text[0].text
+            else:
+                return " ".join(data.text)
+
+    def length_from_sec(self,seconds):
+        m, s = divmod(seconds, 60)
+        h, m = divmod(m, 60)
+        if h>0:
+            return "%d:%02d:%02d" % (h, m, s)
+        else:
+            return "%02d:%02d" % (m, s)
+
+    def get_length(self,mutagen_info,file,size):
+        if hasattr(mutagen_info,'length'):
+            length=self.length_from_sec(mutagen_info.length)
+        else:
+            bit=self.get_bitrate(mutagen_info,file,size)
+            if bit>0:
+                length=self.length_from_sec((size*8)/bit)
+            else:
+                length='<Unknown>'
+        return length
+
+    def get_bitrate(self, mutagen_info, file,size):
+        if hasattr(mutagen_info, 'bitrate'):
+            bit = mutagen_info.bitrate/1000
+        else:
+            if hasattr(mutagen_info, 'length'):
+                bit = (size*8)/(mutagen_info.length*1000)
+            else:
+                bit=0 #TODO:proper bitrate and length
+        return bit
+
+    def __init__(self,file):
+        self.filename = file
+        self.mutagen_file = mutagenx.File(file)
+        #self.format=type(self.mutagen_file)
+
+        self.album = None
+        self.artist = None
+        self.title = None
+        self.genre = None
+        #if mutagenx.genres: self.genre=mutagen_file.genres
+        self.tracknumber = None
+        #self.discnumber = None
+        self.date = None
+        self.comment = None
+        #self.copyright=None
+        size = os.path.getsize(file)/1024/1024
+        self.size=str("%.1f"%size)+' mb'
+        #bitrate in 'xxx kbps'
+        bit=self.get_bitrate(self.mutagen_file.info,file,size)
+        if bit>0:
+            self.bitrate=str("%.f" % bit)+" kbps"
+        else:
+            self.bitrate='<Unknown>'
+
+        #length in 'h:m:s'
+        self.length=self.get_length(self.mutagen_file.info,file,size)
+
+
+        for key,value in self.mutagen_file.items():
+            if key in self.tag_groups.keys():
+                setattr(self, self.tag_groups[key], self.parse_mutagen_value(value))
+

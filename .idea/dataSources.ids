@@ -7,13 +7,23 @@
     <table name="ALBUMS" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <column name="album" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
-      <column name="artistid" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
-      <column name="years" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <primary-key columns="id"/>
     </table>
     <table name="ARTISTS" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <column name="artist" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="DIRECTORIES" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="parentid" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="directory" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="FILES" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="parentid" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="filename" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <primary-key columns="id"/>
     </table>
     <table name="GENRES" schema="" catalog="" type="TABLE">
@@ -26,15 +36,15 @@
       <column name="filename" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <column name="fullpath" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <column name="directory" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
-      <column name="size" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <column name="format" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="length" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <column name="bitrate" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <column name="tn" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
-      <column name="track" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="title" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <column name="genreid" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <column name="artistid" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <column name="albumid" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
-      <column name="year" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="year" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <column name="comment" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <primary-key columns="id"/>
     </table>

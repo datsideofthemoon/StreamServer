@@ -1,69 +1,77 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>StreamPlayer</title>
-        <meta name="description" content="Use your Subsonic library anywhere!">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{{ url_for('static',filename='css/normalize.css') }}">
-		<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.css') }}" media="screen">
-		<link rel="stylesheet" href="{{ url_for('static',filename='css/slider.css') }}">
-		<link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
-        <!--<script src="static/js/vendor/modernizr.js"></script>-->
-    </head>
-  <body>
-    <div class="navbar navbar-default">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-          </button>
-          <a href="/" class="navbar-brand">StreamPlayer</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-		  {% for item in Navigation -%}
-            <li{% if item.active %} class="active"{% endif %}><a href="{{ item.href }}">{{ item.caption }}</a></li>
-		  {% endfor %}
-          </ul>
-		  <ul class="nav navbar-nav navbar-right">
-		  <li>
-              <form role="search" class="navbar-form">
-                  <div class="form-group">
-                    <input type="text" placeholder="Search" class="form-control">
-                  </div>
-              </form>
-           </li>
-           <li><a href="#login">Login</a></li>
+<!DOCTYPE html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>StreamPlayer</title>
+    <meta name="description" content="Use your music library anywhere!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/normalize.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.slatetheme.css') }}" media="screen">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/jquery-ui.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/jquery.ui.slider.min.css') }}">
+    <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css">-->
+    <!--<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <!--<script src="static/js/vendor/modernizr.js"></script>-->
+</head>
+<body>
+<div class="navbar navbar-default">
+    <div class="navbar-header">
+        <a class="btn navbar-btn" id="goback" style="width:60px;float:left;margin-left:5px;"><span
+                class="glyphicon glyphicon-chevron-left"></span></a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"
+                style="margin-right:5px;">
+            <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+                class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">StreamPlayer</a>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            {% for item in Navigation -%}
+                <li{% if item.active %} class="active"{% endif %}><a link="{{ item.link }}">{{ item.caption }}</a></li>
+            {% endfor %}
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+
+            <li>
+                <form role="search" class="navbar-form">
+                    {% if username %}<span class="glyphicon glyphicon-user"><a href="/settings">{{ username }}</a>
+                        </span>{% endif %}
+                    <input type="text" placeholder="Search" class="form-control">
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--<div class="container">-->{% block content %}{% endblock %}<!--</div>-->
+<footer>
+    <div id="player">
+        <div id="timeup" style="float:left;"></div>
+        <div id="slider" style="float:left;"></div>
+        <div id="timeleft" style="float:left;"></div>
+    </div><br style="clear: left;" />
+    <div class="btn-toolbar">
+        <div class="btn-group-lg">
+            <a class="btn btn-lg" id="prev_track"><span class="glyphicon glyphicon-fast-backward"></span></a>
+            <a class="btn btn-lg" id="playbtn"><span class="glyphicon glyphicon-play"></span></a>
+            <a class="btn btn-lg" id="next_track"><span class="glyphicon glyphicon-fast-forward"></span></a>
         </div>
-      </div>
-      <!--<div class="container">-->{% block content %}{% endblock %}<!--</div>-->
-    
-      <footer> 
-		<div id="slider"><div id="labelslider"></div></div><br>
-	  <div class="btn-toolbar">
-		<div class="btn-group">
-		  <a class="btn btn-default">&lt;&lt;</a>
-          <a onclick="play();"class="btn btn-default">Play</a>
-          <a class="btn btn-default">&gt;&gt;</a>
-		</div>
-		<div class="btn-group">
-		  <a class="btn btn-default">Repeat</a>
-          <a class="btn btn-default">Shuffle</a>
-		</div>
-	  </div></footer>
-	    <script type="text/javascript" charset="utf-8">$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};</script>
-        <script src="{{ url_for('static',filename='js/vendor/jquery.js') }}"></script>
-		<script src="{{ url_for('static',filename='js/vendor/jquery.lazyload.js') }}"></script>
-		<script src="{{ url_for('static',filename='js/vendor/bootstrap.js') }}"></script>
-		<script src="{{ url_for('static',filename='js/vendor/bootstrap-slider.js') }}"></script>
-		<script src="{{ url_for('static',filename='js/vendor/howler.js') }}"></script>
-        <script src="{{ url_for('static',filename='js/plugins.js') }}"></script>
-        <script src="{{ url_for('static',filename='js/streamplayer.js') }}"></script>
-		<script type="text/javascript" charset="utf-8">$(function() { $("img.lazy").lazyload({ effect : "fadeIn",skip_invisible : false});});</script>
-    </body>
+    </div>
+
+</footer>
+<script type="text/javascript" charset="utf-8">$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};</script>
+<script src="{{ url_for('static',filename='js/vendor/jquery.js') }}"></script>
+<script src="{{ url_for('static',filename='js/vendor/jquery-ui.min.js') }}"></script>
+<script src="{{ url_for('static',filename='js/vendor/jquery.ui.slider.min.js') }}"></script>
+<script src="{{ url_for('static',filename='js/vendor/jquery.history.js') }}"></script>
+<!--<script src="{{ url_for('static',filename='js/vendor/jquery.lazyload.js') }}"></script>-->
+<script src="{{ url_for('static',filename='js/vendor/bootstrap.js') }}"></script>
+<!--<script src="{{ url_for('static',filename='js/vendor/ion.rangeSlider.js') }}"></script>-->
+<script src="{{ url_for('static',filename='js/plugins.js') }}"></script>
+<script src="{{ url_for('static',filename='js/streamplayer.js') }}"></script>
+<!--<script type="text/javascript" charset="utf-8">$(function () { $("img.lazy").lazyload({ effect: "fadeIn", skip_invisible: false});});</script>
+</body>
 </html>

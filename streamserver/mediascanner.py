@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #LIBS
-import sys, os, logging, mutagen, jsonpickle, sqlite3
+import sys, os, logging
 from fnmatch import fnmatch
 from lxml import etree
 #MODULES
@@ -122,6 +122,7 @@ def fullscan():
     tree_root = etree.Element('root')
     for dir in app.Config.MUSIC_LIB:
         tree_root.append(recursive_scan(dir, 0))
-    n = app.Sqlite3DB.insert_many('mediafiles', mediafiles_flds, mediafiles_values)
-    Log.info("Fullscan done, inserted %s mediafiles." % n)
+    if app.Sqlite3DB.insert_many('mediafiles', mediafiles_flds, mediafiles_values):
+        Log.info("Fullscan done, inserted %s mediafiles." % len(mediafiles_values))
+    #print(n)
     return tree_root

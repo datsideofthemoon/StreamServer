@@ -63,19 +63,76 @@ StreamClient.Navigation = function (StartFrom)
             Navigation.GoTo(NAV, false);
         }
     }
-
-    this.GoTo = function (toview, backward)
+    this.ShowTracks = function (data)
     {
-        switch (toview.page)
+        var table = $("<table>").attr("class", "table table-striped");
+        Playlist.Tracks = data;
+        for (var r = 0; r < data.length; r++)
+        {
+            //var a = $("<a>").attr("link", 'play/' + jsondata[r].id).text(jsondata[r].title);
+            var td_title = $('<td>').attr("link", 'play/' + data[r].id).text(data[r].title);
+            td_title.data('track', data[r]);
+            var td_time = $("<td>").text(data[r].length);
+            var td_size = $("<td>").text(data[r].size);
+            var row = $("<tr>");
+            td_title.appendTo(row);
+            td_time.appendTo(row);
+            td_size.appendTo(row);
+            row.appendTo(table);
+        }
+        Playlist.Tag.fadeOut('fast', function ()
+        {
+            Playlist.Tag.html(table).fadeIn('fast');
+            $('div#playlist td').on('click', that.NavigationOnClick);
+        });
+    }
+    this.ShowNavigation = function (data, subpage)
+    {
+        // Playlist['artist+'s'] or Playlist['album'+'s']
+        Playlist[subpage + 's'] = data;
+        //var table = $("<table>").attr("class", "table table-striped");
+        for (var r = 0; r < data.length; r++)
+        {
+            //var a = $("<a>")
+            var row = $("<tr>").html($("<td>").attr("link", subpage + '/' + data[r].id).text(data[r].name));
+            row.appendTo(table);
+        }
+        Playlist.Tag.fadeOut('fast', function ()
+        {
+            Playlist.Tag.html(table).fadeIn('fast');
+            $('div#playlist td').on('click', that.NavigationOnClick);
+        });
+    }
+    this.ShowIndex = function ()
+    {
+        div = $("<div>").attr("class", "row");//.text('This is index yo.');
+        for (i = 0; i < 3; i++)
+        {
+            $("<div>").attr("class", "col-lg-4").text('some').appendTo(div);
+
+        }
+
+        return div;
+    }
+    this.GoTo = function (nav, backward)
+    {
+        // toview={
+        //      page,
+        //      data  = {
+        //              subpage,
+        //              id
+        //              }
+        //        }
+        switch (nav.page)
         {
             case 'index':
-                var htmlpage = 'This is index page. Here you can see different album art, random songs or other stuff.';
-                Playlist.Tag.html(htmlpage);
+                var htmlpage = that.ShowIndex();//'This is index page. Here you can see different album art, random songs and other stuff.';
+                Playlist.Tag.attr('class', '').html(htmlpage);
                 break;
             case 'library':
                 var table = $("<table>").attr("class", "table table-striped");
-                if (!toview.data)
-                {//page:library data:null
+                if (nav.data == null) //page:library data:null
+                {
                     table.append($("<tr>").html($("<td>").attr('link', 'genre/0').text('Genres')));
                     table.append($("<tr>").html($("<td>").attr('link', 'artist/0').text('Artists')));
                     table.append($("<tr>").html($("<td>").attr('link', 'album/0').text('Albums')));
@@ -89,91 +146,57 @@ StreamClient.Navigation = function (StartFrom)
                     });
                 }
                 else
-                {     //subpage=artist||album||genre||year, id=0
-                    if (toview.data.id == 0)
+                {
+                    if (nav.data.subpage == 'artist' || nav.data.subpage == 'album' || nav.data.subpage == 'genre' || nav.data.subpage == 'year')
                     {
-                        var url = $SCRIPT_ROOT + '/_' + toview.data.subpage + '/0';
-                        $.getJSON(url, {},
-                            function (data)
-                            {
-                                var jsondata = data.data;
-                                // Playlist['artist+'s'] or Playlist['album'+'s']
-                                Playlist[toview.data.subpage + 's'] = jsondata;
-                                //var table = $("<table>").attr("class", "table table-striped");
-                                for (var r = 0; r < jsondata.length; r++)
-                                {
-                                    //var a = $("<a>")
-                                    var row = $("<tr>").html($("<td>").attr("link", toview.data.subpage + '/' + jsondata[r].id).text(jsondata[r].name));
-                                    row.appendTo(table);
-                                }
-                                Playlist.Tag.fadeOut('fast', function ()
-                                {
-                                    Playlist.Tag.html(table).fadeIn('fast');
-                                    $('div#playlist td').on('click', that.NavigationOnClick);
-                                });
-                            });
-                    }
-                    else
-                    {
-                        switch (toview.data.subpage)
+                        if (nav.data.id == 0)
                         {
-                            case 'artist': //list of albums with artistid=x
-                                $.getJSON($SCRIPT_ROOT + '/_artist/' + toview.data.id, {},
-                                    function (data)
-                                    {
-                                        var jsondata = data.data;
-                                        Playlist.albums = jsondata;
-                                        for (var r = 0; r < jsondata.length; r++)
-                                        {
-                                            //var a = $("<a>").attr("link", 'album/' + jsondata[r].id).text(jsondata[r].name);
-                                            var row = $("<tr>").html($("<td>").attr("link", 'album/' + jsondata[r].id).text(jsondata[r].name));
-                                            row.appendTo(table);
-                                        }
-                                        Playlist.Tag.fadeOut('fast', function ()
-                                        {
-                                            Playlist.Tag.html(table).fadeIn('fast');
-                                            $('div#playlist td').on('click', that.NavigationOnClick);
-                                        });
-                                    });
-                                break;
-                            case 'album' : //list of tracks
-                            case 'year' :
-                            case 'genre' :
-                                $.getJSON($SCRIPT_ROOT + '/_' + toview.data.subpage + '/' + toview.data.id, {},
-                                    function (data)
-                                    {
-                                        var jsondata = data.data;
-                                        Playlist.Tracks = jsondata;
-                                        for (var r = 0; r < jsondata.length; r++)
-                                        {
-                                            //var a = $("<a>").attr("link", 'play/' + jsondata[r].id).text(jsondata[r].title);
-                                            var td_title = $('<td>').attr("link", 'play/' + jsondata[r].id).text(jsondata[r].title);
-                                            td_title.data('track', jsondata[r]);
-                                            var td_time = $("<td>").text(jsondata[r].length);
-                                            var td_size = $("<td>").text(jsondata[r].size);
-                                            var row = $("<tr>");
-                                            td_title.appendTo(row);
-                                            td_time.appendTo(row);
-                                            td_size.appendTo(row);
-                                            row.appendTo(table);
-                                        }
-                                        Playlist.Tag.fadeOut('fast', function ()
-                                        {
-                                            Playlist.Tag.html(table).fadeIn('fast');
-                                            $('div#playlist td').on('click', that.NavigationOnClick);
-                                        });
-                                    });
-                                break;
-                            default:
-                                alert('wrong subpage:' + toview.data.subpage);
+                            var url = $SCRIPT_ROOT + '/_' + nav.data.subpage + '/0';
+                            $.getJSON(url, {}, function (data) {Navigation.ShowNavigation(data.data);});
                         }
+                        else if (nav.data.id > 0)
+                        {
+                            switch (nav.data.subpage)
+                            {
+                                case 'artist': //list of albums with artistid=x
+                                    $.getJSON($SCRIPT_ROOT + '/_artist/' + nav.data.id, {},
+                                        function (data)
+                                        {
+                                            var jsondata = data.data;
+                                            Playlist.albums = jsondata;
+                                            for (var r = 0; r < jsondata.length; r++)
+                                            {
+                                                //var a = $("<a>").attr("link", 'album/' + jsondata[r].id).text(jsondata[r].name);
+                                                var row = $("<tr>").html($("<td>").attr("link", 'album/' + jsondata[r].id).text(jsondata[r].name));
+                                                row.appendTo(table);
+                                            }
+                                            Playlist.Tag.fadeOut('fast', function ()
+                                            {
+                                                Playlist.Tag.html(table).fadeIn('fast');
+                                                $('div#playlist td').on('click', that.NavigationOnClick);
+                                            });
+                                        });
+                                    break;
+                                case 'album' : //list of tracks
+                                case 'year' :
+                                case 'genre' :
+                                    $.getJSON($SCRIPT_ROOT + '/_' + nav.data.subpage + '/' + nav.data.id, {}, function (data) {Navigation.ShowTracks(data.data);});
+                                    break;
+                                default:
+                                    alert('wrong subpage:' + nav.data.subpage);
+                            }
+                        }
+                    }
+                    else if (nav.data.subpage == 'song' && nav.data.id == 0)
+                    {
+                        $.getJSON($SCRIPT_ROOT + '/_' + nav.data.subpage + '/0', {}, function (data) {Navigation.ShowTracks(data.data);});
                     }
                 }
                 break;
             case 'folders':
-                if (toview.data)
+                if (nav.data)
                 {
-                    var url = $SCRIPT_ROOT + '/_folder/' + toview.data.id;
+                    var url = $SCRIPT_ROOT + '/_folder/' + nav.data.id;
                 }
                 else
                 {
@@ -233,7 +256,7 @@ StreamClient.Navigation = function (StartFrom)
                     });
                 break;
             default:
-                alert('Cant go to: ' + toview.page);
+                alert('Cant go to: ' + nav.page);
         }
         if (!backward)
         {
@@ -251,10 +274,10 @@ StreamClient.Navigation = function (StartFrom)
             }
             else
             {
-                History.replaceState({_index: History.getCurrentIndex(), data: toview}, "StreamPlayer - " + toview.page, '');
+                History.replaceState({_index: History.getCurrentIndex(), data: nav}, "StreamPlayer - " + nav.page, '');
             }
         }
-        that.CurrentView = toview;
+        that.CurrentView = nav;
     }
 
     this.GoBack = function ()
@@ -420,13 +443,13 @@ StreamClient.Slider = function ()
 StreamClient.AudioPlayer = function ()
 {
     this.AudioElementState = 'notcreated';
-    this.IsPlaying=false;
+    this.IsPlaying = false;
 
     this.SetState = function (state)
     {
         console.log('AudioElement state: ' + state);
         AudioPlayer.AudioElementState = state;
-        AudioPlayer.CanPlay=true;
+        AudioPlayer.CanPlay = true;
     }
     this.LoadMedia = function (url)
     {
@@ -475,11 +498,11 @@ StreamClient.AudioPlayer = function ()
     }
     this.Play = function ()
     {
-        if (AudioPlayer.CanPlay $$ !AudioPlayer.IsPlaying)
+        if (AudioPlayer.CanPlay && !AudioPlayer.IsPlaying)
         {
             AudioPlayer.AudioElement.play();
             AudioPlayer.AudioElementState = 'playing';
-            AudioPlayer.IsPlaying=true;
+            AudioPlayer.IsPlaying = true;
         }
     }
     this.Pause = function ()
@@ -517,8 +540,7 @@ $("#playbtn").click(function ()
         }
     }
     icon.html(AudioPlayer.AudioElementState + ' ' + AudioPlayer.MediaState);
-})
-;
+});
 
 Slider = new StreamClient.Slider();
 

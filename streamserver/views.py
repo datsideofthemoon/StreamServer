@@ -41,7 +41,7 @@ def login_required(f):
     return decorated_function
 
 
-def try_login(user,pw):
+def try_login(user, pw):  #TODO:log in security issues
     salt="some salt"
     pwhash = hashlib.sha512(pw.encode('utf-8') + salt.encode('utf-8')).hexdigest()
     res=app.Sqlite3DB.query_db('select 1 from users where username=(?) and passwordhash=(?)',(user,pwhash),one=True)
@@ -142,7 +142,10 @@ def get_years(id):
 @app.route('/_song/<id>')
 @login_required
 def get_song(id):
-    res=app.Sqlite3DB.query_db("select 1 from mediafiles where id="+id)
+    if id == '0':
+        res = app.Sqlite3DB.query_db("select * from mediafiles")
+    else:
+        res = app.Sqlite3DB.query_db("select 1 from mediafiles where id=" + id)
     return jsonify(data=res)
 
 @app.route('/_preload')

@@ -78,15 +78,18 @@ class ServerDatabase:
         return idx
 
     def insert_many(self, table, fields=(), values=[]):
-        with app.app_context():
-            db = self.get_db()
-            cur = db.cursor()
-            query = 'INSERT INTO %s (%s) VALUES (%s)' % (table, ', '.join(fields), ', '.join(['?'] * len(fields)))
-            cur.executemany(query, values)
-            db.commit()
-            id = cur.lastrowid #TODO: id somehow returns None
-            cur.close()
-            return id
+        try:
+            with app.app_context():
+                db = self.get_db()
+                cur = db.cursor()
+                query = 'INSERT INTO %s (%s) VALUES (%s)' % (table, ', '.join(fields), ', '.join(['?'] * len(fields)))
+                cur.executemany(query, values)
+                db.commit()
+                #id = cur.lastrowid
+                cur.close()
+                return True
+        except:
+            return False
 
     def insert(self, table, fields=(), values=()):
         with app.app_context():
